@@ -11,3 +11,8 @@ allow rild system_data_file:lnk_file r_file_perms;
 #allow rild tmpfs:dir search;
 
 allow rild proc_qtaguid_stat:file r_file_perms;
+
+
+#============= rild ==============
+allow rild device:chr_file ioctl;
+allow rild device:chr_file { open read };
